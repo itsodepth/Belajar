@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dimensi & Overflow</title>
+        <style>
+            .satu {
+                width: 200px;
+                /* Nilai pixel ini absolut */
+                height: 200px;
+                background-color: pink;
+            }
+
+            .dua {
+                width: 50%;
+                /* Nilai persentase relatif terhadap parent */
+                /* Jika persentase nilai child element lebih besar, maka nilainya akan bocor dari parent-nya */
+                background-color: aqua;
+            }
+
+            .tiga {
+                width: 200px;
+                /* Nilai pixel ini absolut */
+                height: 200px;
+                background-color: pink;
+            }
+
+            .empat {
+                width: 110%;
+                /* Nilai persentase relatif terhadap parent */
+                /* Jika persentase nilai child element lebih besar, maka nilainya akan bocor dari parent-nya */
+                background-color: aqua;
+            }
+
+            .lima {
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+                overflow: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Contoh ketika dimensi berjalan dengan normal -->
+        <h3>Contoh dimensi berhasil</h3>
+        <div class="satu">
+            <div class="dua">Hello Dunia</div>
+        </div>
+
+        <!-- Contoh ketika dimensi berjalan error -->
+        <h3>Contoh error dimensi</h3>
+        <div class="tiga">
+            <div class="empat">Hello Dunia</div>
+        </div>
+
+        <!-- Untuk mengatasi perilaku yang melebihi dimensi -->
+        <h3>Kita menggunakan overflow: auto</h3>
+        <div class="lima">
+            <div class="enam">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex enim quod, nemo quos
+                ducimus cumque perferendis distinctio omnis non, repellat illum nisi dicta doloremque necessitatibus
+                accusantium aliquam unde commodi.
+                Aliquid, itaque nemo! Corrupti dolorum maiores voluptate veritatis eaque commodi hic debitis a
+                voluptatibus temporibus, laudantium impedit cum tempore ea ducimus nihil quia sed. Facere sint accusamus
+                nesciunt sed ea!</div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        h1, h2, p {
+            background-color: pink;
+        }
+        .navigasi li{
+            /* Display inline tidak bisa diatur width dan height nya */
+            display: inline; /*Default display dari tag li adalah block*/
+            background-color: lightblue;
+            width: 200px; /* Sintaks disamping tidak akan berpengaruh */
+        }
+        .header span{
+            background-color: lightcoral;
+            display: block; /* Default display dari tag span adalah inline */
+            width: 200px;
+            height: 200px; /* Secara default, display block dapat diatur width dan heightnya */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Devano Alfarizy adalah orang <span>keren</span></h1>
+    </div>
+
+    <div class="navigasi">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+            <li><a href="#">Link 5</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <h2>Terus kenapa kalo jadi keren itu jelek?</h2>
+        <p>Dih ngatain lu, meh sini kita gelud coy</p>
+    </div>
+    
+    <div class="footer">
+        <p>Ini adalah footer yg isinya copyright</p>
+    </div>
+</body>
+</html>
